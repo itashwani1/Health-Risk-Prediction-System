@@ -44,22 +44,13 @@ This is a collaborative college group project designed to demonstrate modern web
 
 ---
 
-## 📋 Prerequisites
-
-Before you begin, ensure you have installed:
-- **Node.js** 18.x or higher ([download](https://nodejs.org/))
-- **pnpm** 8.x or higher (`npm install -g pnpm`)
-- **Git** for version control
-- A **Supabase** account ([create free account](https://supabase.com))
-
----
 
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/health-risk-prediction.git
+git clone https://github.com/itashwani1/Health-Risk-Prediction-System
 cd health-risk-prediction
 ```
 
@@ -82,26 +73,6 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 ```
 
-**How to get your Supabase credentials:**
-1. Go to [Supabase Dashboard](https://app.supabase.com)
-2. Select your project
-3. Navigate to Settings → API
-4. Copy the Project URL and anon key
-
-### 4. Set Up the Database
-
-Run the migration script to create the predictions table:
-
-```bash
-# Using psql (if you have PostgreSQL installed)
-psql -U postgres -d your_database -f scripts/001_create_predictions_table.sql
-```
-
-Or execute the SQL directly in Supabase SQL Editor:
-```sql
--- Open Supabase Dashboard → SQL Editor → Create New Query
--- Copy contents from: scripts/001_create_predictions_table.sql
-```
 
 ### 5. Run the Development Server
 
@@ -109,7 +80,7 @@ Or execute the SQL directly in Supabase SQL Editor:
 pnpm dev
 ```
 
-Visit **http://localhost:3000** in your browser.
+Visit **https://health-risk1.vercel.app/** in your browser.
 
 ---
 
@@ -219,16 +190,7 @@ CREATE TABLE predictions (
 
 ---
 
-## 🔗 API Routes
 
-| Route | Method | Purpose |
-|-------|--------|---------|
-| `/api/auth/callback` | GET | OAuth callback handler |
-| `/api/predictions` | POST | Submit health assessment |
-| `/api/predictions` | GET | Retrieve prediction history |
-| `/api/predictions/:id` | GET | Get specific prediction details |
-
----
 
 ## 📱 Responsive Breakpoints
 
@@ -238,26 +200,6 @@ CREATE TABLE predictions (
 
 The app is fully responsive using Tailwind CSS utilities.
 
----
-
-## 🧪 Development Commands
-
-```bash
-# Start development server with hot reload
-pnpm dev
-
-# Build for production
-pnpm build
-
-# Start production server
-pnpm start
-
-# Run linting (if configured)
-pnpm lint
-
-# Format code (if configured)
-pnpm format
-```
 
 ---
 
@@ -266,11 +208,6 @@ pnpm format
 ### Issue: "Supabase connection failed"
 **Solution**: Verify your `.env.local` file has correct Supabase credentials.
 
-### Issue: "Port 3000 already in use"
-**Solution**: Use a different port:
-```bash
-pnpm dev -- -p 3001
-```
 
 ### Issue: "Module not found" error
 **Solution**: Clear node_modules and reinstall:
@@ -286,22 +223,16 @@ pnpm install
 ### Deploy to Vercel (Recommended)
 
 1. Push your code to GitHub
-2. Go to [Vercel Dashboard](https://vercel.com)
+2. Go to [Vercel Dashboard](https://health-risk1.vercel.app/)
 3. Click "New Project" and import your repository
-4. Add environment variables in Project Settings
-5. Click "Deploy"
 
-### Deploy to Other Platforms
-- **Netlify**: Connect GitHub repo, add env vars, deploy
-- **Railway**: Connect GitHub repo, add env vars, deploy
-- **Docker**: Create `Dockerfile` and push to container registry
+
 
 ---
 
 ## 👥 Contributors
 
 This is a collaborative college group project. Team members:
-- [Add team member names]
 
 ---
 
@@ -310,25 +241,3 @@ This is a collaborative college group project. Team members:
 This project is licensed under the MIT License - see LICENSE file for details.
 
 ---
-
-## 📞 Support & Contact
-
-For questions or issues:
-1. Open an issue on GitHub
-2. Contact the development team
-3. Check the [Supabase Documentation](https://supabase.com/docs)
-4. Review [Next.js Documentation](https://nextjs.org/docs)
-
----
-
-## 🎓 Learning Resources
-
-- [Next.js Fundamentals](https://nextjs.org/learn)
-- [Supabase Auth Guide](https://supabase.com/docs/guides/auth)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [React Hooks API](https://react.dev/reference/react/hooks)
-
----
-
-**Last Updated**: April 2024 | **Status**: Active Development
